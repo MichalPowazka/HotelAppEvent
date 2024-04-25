@@ -1,0 +1,77 @@
+.room-card {
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px; /* Możesz dostosować, aby zmienić odstępy */
+  background-color: #fff;
+}
+
+.room {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Styl dla każdego kontenera pokoju */
+.room > div {
+  border: 1px solid #ddd; /* Jasnoszara obramówka */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Delikatny cień dla głębi */
+  border-radius: 8px; /* Zaokrąglone rogi */
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Styl dla nagłówka pokoju */
+.room h2 {
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+/* Styl dla obrazka pokoju */
+.room img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd; /* Obramowanie oddzielające obraz od treści */
+}
+
+/* Styl dla opisu i danych pokoju */
+.room p {
+  padding: 0 1rem;
+  text-align: left;
+  margin: 0.5rem 0;
+}
+
+/* Styl dla przycisku aktualizacji */
+.room .btn-primary {
+  display: block;
+  width: calc(100% - 2rem);
+  margin: 1rem auto;
+}
+
+
+  @media (min-width: 500px) and (max-width: 768px) {
+    .results {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    input[type="text"] {
+        width: 70%;
+    }   
+  }
+  
+  @media (max-width: 499px) {
+    .results {
+        grid-template-columns: 1fr;
+    }    
+  }
+  
+  

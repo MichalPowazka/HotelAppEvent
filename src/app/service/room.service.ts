@@ -12,4 +12,9 @@ export class RoomService {
   login(obj:any) {
     return this.http.post(this.apiEndPoint + 'Account/Login', obj)
   }
+
+  getAllRooms() {
+    return this.http.get(this.apiEndPoint + '')
+    
+  }
 }

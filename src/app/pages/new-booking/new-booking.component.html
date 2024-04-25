@@ -1,1 +1,25 @@
-<p>new-booking works!</p>
+<div class="container">
+    <!-- Rząd dla pokoi z dodatkowymi marginesami -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Karta pokoju; pętla powtarza tę kolumnę dla każdego pokoju -->
+      <div *ngFor="let room of rooms" class="col">
+        <div class="room-card h-100">
+          <h2>{{ room.name }}</h2>
+          <img [src]="room.imageSrc" alt="Zdjęcie pokoju" class="img-fluid">
+          <p>{{ room.description }}</p>
+          <div class="room-data">
+            <p><strong>Dane pokoju:</strong></p>
+            <p>Miasto: {{ room.city }}</p>
+            <p>Ulica: {{ room.street }}</p>
+            <p>Numer domu: {{ room.houseNumber }}</p>
+            <p>Numer mieszkania: {{ room.apartamentNumber }}</p>
+            <p>Kod pocztowy: {{ room.postCode }}</p>
+          </div>
+          <input type="date">
+          
+          <button class="btn btn-primary" (click)="addReservation(room)">Aktualizacja</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
